@@ -1,10 +1,8 @@
 import { ChatInputCommandInteraction, Client, IntentsBitField } from "discord.js";
 import config from "./config";
 import mierzejewska from "./commands/getRandomMierzejewskaMessage";
-import MusicControls from "./commands/musiccontrols";
 import "./commands/registerSlashCommands";
 
-const MusicController = new MusicControls();
 
 const client = new Client({
     intents: [
@@ -28,10 +26,6 @@ client.on('interactionCreate', (interaction) => {
     switch (interaction.commandName) {
         case "hey": greet(interaction); break;
         case "zlotamysl": mierzejewska(interaction, client); break;
-        case "play": MusicController.handlePlay(interaction); break;
-        case "skip": MusicController.handleSkip(interaction); break;
-        case "nowplaying": MusicController.handleNowPlaying(interaction); break;
-        case "queue": MusicController.handleQueue(interaction); break;
     }
 });
 

@@ -33,30 +33,6 @@ const commands: TCommand[] = [
                 ]
             }
         ]
-    },
-    {
-        name: "play",
-        description: "Odtwórz ten utwór!",
-        options: [
-            {
-                name: 'title',
-                description: 'Tytuł utworu do odtworzenia lub jego adres url!',
-                type: ApplicationCommandOptionType.String,
-                required: true,
-            },
-        ],
-    },
-    {
-        name: "skip",
-        description: "Pomiń ten utwór!"
-    },
-    {
-        name: "nowplaying",
-        description: "Co teraz jest grane?"
-    },
-    {
-        name: "queue",
-        description: "Co teraz będzie grane?"
     }
 ]
 
